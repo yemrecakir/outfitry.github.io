@@ -52,31 +52,41 @@
 
       <h2>3. Hangi verileri topluyoruz?</h2>
       <h3>A. Hesap Bilgileri</h3>
-      <p>Ad, e-posta, kullanıcı adı, şifre (şifreler güvenli şekilde hash'lenir).</p>
+      <p>Ad soyad, e-posta, kullanıcı adı, şifre (şifreler güvenli şekilde hash'lenir), cinsiyet, doğum tarihi, profil fotoğrafı, bio, web sitesi.</p>
+      <p><strong>Üçüncü Parti Giriş:</strong> Google Sign-In, Apple Sign-In, Facebook Login ile giriş yapılabilir.</p>
       <h3>B. İçerik Verileri</h3>
-      <p>Yüklediğiniz kıyafet/görsel dosyaları, bu görsellere ilişkin açıklamalar, etiketler ve konum (kullanıcı izin verirse).</p>
+      <p>Yüklediğiniz kıyafet/görsel dosyaları (çoklu fotoğraf desteği), profil fotoğrafları, virtual try-on sonuçları, post açıklamaları, yorumlar, hikaye (story) paylaşımları, etiketler ve konum (sadece hava durumu için WeatherKit entegrasyonu ile, opsiyonel).</p>
       <h3>C. Kullanım ve Teknik Veriler</h3>
-      <p>IP adresi, cihaz bilgileri (cihaz modeli, işletim sistemi), tarayıcı bilgileri, uygulama sürümü, loglar, çerez ID'leri.</p>
+      <p>IP adresi, cihaz bilgileri (cihaz modeli, işletim sistemi), device token (push notification için), uygulama sürümü, loglar, crash raporları (Firebase Crashlytics), Smartlook analitikleri, Meta Pixel Events, Google AdMob verileri.</p>
       <h3>D. İletişim Verileri</h3>
-      <p>Destek talepleri, kullanıcılarla yapılan mesajlaşma/metinler, geri bildirimler.</p>
-      <h3>E. Analitik ve Performans Verileri</h3>
-      <p>Hizmet kullanım metrikleri, etkileşim verileri, performans ölçümleri.</p>
+      <p>Destek talepleri, özel mesajlaşma sistemi ile kullanıcılar arası mesajlar, yorumlar, geri bildirimler, kullanıcı şikayet sistemi verileri.</p>
+      <h3>E. Sosyal Medya Etkileşimleri</h3>
+      <p>Takip/takipçi ilişkileri, beğeni, yorum, repost, paylaşım verileri, kullanıcı engelleme listesi, bildirim tercihleri.</p>
+      <h3>F. Analitik ve Performans Verileri</h3>
+      <p>Hizmet kullanım metrikleri, etkileşim verileri, performans ölçümleri, Smartlook kullanıcı davranış analitikleri, Meta Pixel Events, Google AdMob reklam performansı.</p>
 
       <p><em>Not:</em> Dünya çapında farklı yasal düzenlemeler açısından fotoğraflar bazen biyometrik veri kabul edilebilir; Uygulama, varsayılan olarak <strong>yüz tanıma veya biyometrik kimlik çıkarımı yapmaz</strong>. Eğer ileride bu tür işlemler yapılacaksa kullanıcıdan ayrıca açık rıza alınacaktır.</p>
 
       <h2>4. Verilerin İşlenme Amaçları ve Hukuki Dayanaklar</h2>
       <ol>
         <li><strong>Hizmet sunma ve hesap yönetimi</strong> (hesap bilgileri, içerik): Hizmetin ifası / sözleşmenin kurulması ve ifası.</li>
-        <li><strong>Kombin önerileri üretme (AI ile)</strong> (içerik verileri, teknik veriler): Kullanıcının açık rızası ve hizmetin ifası. (Kullanıcı uygulamaya görsel yükleyerek öneri alınmasına onay verir.)</li>
+        <li><strong>AI özellikleri</strong> (içerik verileri, teknik veriler): Virtual Try-On (Gemini AI ile sanal deneme), AI Chat (moda önerileri), Clothing Analysis (kıyafet analizi), Background Removal servisi. Kullanıcının açık rızası ve hizmetin ifası.</li>
         <li><strong>Analitik ve hizmet iyileştirme</strong> (kullanım ve analitik veriler): Meşru menfaat (hizmet kalitesini artırma). Meşru menfaat gerekçesi, veri minimizasyonu ve denge testi dokümante edilir.</li>
         <li><strong>Yasal yükümlülükler</strong> (loglar, destek kayıtları): Yasal zorunlulukların yerine getirilmesi.</li>
-        <li><strong>Pazarlama / Reklam</strong> (eğer kullanıcı onayı/verdiği tercihler): Açık rıza veya kullanıcı tercihleri; reklam partnerleri ile paylaşım var ise bunun detayları kullanıcıya sunulur.</li>
+        <li><strong>Pazarlama / Reklam</strong> (Google AdMob, Meta Pixel): Açık rıza veya kullanıcı tercihleri; Google AdMob reklamları ve Meta Pixel Events ile reklam performansı ölçümü.</li>
+        <li><strong>Sosyal medya paylaşımı</strong>: Instagram, WhatsApp, Snapchat ile içerik paylaşımı (kullanıcı talebi üzerine).</li>
       </ol>
 
       <h2>5. Yapay Zeka (AI) ve Otomatik İşlemeler</h2>
-      <p>Uygulama, <strong>sadece</strong> yüklediğiniz kıyafet/görsel verileri analiz ederek <strong>kombin önerileri</strong> üretir. Bu öneriler görsel işleme ve makine öğrenimi modelleriyle oluşturulur.</p>
+      <p>Uygulama aşağıdaki AI özelliklerini sunar:</p>
+      <ul>
+        <li><strong>Virtual Try-On:</strong> Gemini AI kullanarak, başkalarının paylaştığı kıyafetleri kendi fotoğrafınız üzerinde sanal olarak deneme imkanı.</li>
+        <li><strong>AI Chat:</strong> Moda ve stil önerileri için yapay zeka asistanı.</li>
+        <li><strong>Clothing Analysis:</strong> Yüklenen kıyafetlerin analizi ve kombin önerileri.</li>
+        <li><strong>Background Removal:</strong> Fotoğraflardan arka plan kaldırma servisi.</li>
+      </ul>
       <p>AI tarafından üretilen öneriler <strong>öneri niteliğindedir</strong> ve kullanıcıya alternatif kombinler sunar; bu otomatik sonuçlar kullanıcı hakkında hukuki veya olumsuz kararlar doğurmaz.</p>
-      <p><strong>Model eğitimi:</strong> Eğer kullanıcı görselleri modellerimizin eğitimi için kullanılacaksa, bu amaçla kullanılma <strong>ayrı ve açık bir onay (opt-in)</strong> ile sağlanacaktır. Onay verilmediğinde görseliniz yalnızca sizin kombin önerisi oluşturmanız için kullanılır; eğitim amaçlı kopyalanmaz.</p>
+      <p><strong>Model eğitimi:</strong> Eğer kullanıcı görselleri modellerimizin eğitimi için kullanılacaksa, bu amaçla kullanılma <strong>ayrı ve açık bir onay (opt-in)</strong> ile sağlanacaktır. Onay verilmediğinde görseliniz yalnızca sizin için AI özelliklerini kullanmanız için işlenir; eğitim amaçlı kopyalanmaz.</p>
       <p>Kullanıcı, AI tarafından üretilen sonuçlara itiraz edebilir; itiraz talepleri <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a> adresine iletilir ve insan incelemesi yapılır.</p>
 
       <h2>6. Biyometrik ve Hassas Veriler</h2>
@@ -110,22 +120,40 @@
         <li><strong>Mobil uygulamalarda:</strong> Uygulama ayarları &gt; Gizlilik / Çerez tercihleri</li>
       </ul>
 
-      <h2>9. Güvenlik Tedbirleri</h2>
-      <p>Verileriniz taşınırken TLS/HTTPS ile korunur. Mümkün olan hallerde veriler en az AES-256 benzeri yöntemlerle şifrelenmiş şekilde saklanır.</p>
-      <p>Şifreler güvenli hash algoritmalarıyla depolanır. Personel erişimi rol tabanlı kontrollerle sınırlıdır ve veri işleme faaliyetleri denetlenir. Düzenli güvenlik testleri ve sızma testleri uygulanır.</p>
+      <h2>9. Üçüncü Taraf Hizmet Sağlayıcıları</h2>
+      <p>Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanır:</p>
+      <ul>
+        <li><strong>Supabase:</strong> PostgreSQL veritabanı ve kimlik doğrulama hizmetleri, Row Level Security (RLS) ile korunur.</li>
+        <li><strong>Google:</strong> Sign-In hizmeti, AdMob reklamcılık, Analytics.</li>
+        <li><strong>Apple:</strong> Sign in with Apple, WeatherKit (hava durumu).</li>
+        <li><strong>Meta/Facebook:</strong> Facebook Login, Meta Pixel Events.</li>
+        <li><strong>Cloudflare:</strong> İçerik dağıtım ağı (CDN) ve güvenlik hizmetleri.</li>
+        <li><strong>Firebase:</strong> Crashlytics crash raporlama.</li>
+        <li><strong>Smartlook:</strong> Kullanıcı davranış analitikleri.</li>
+        <li><strong>Vercel:</strong> Web hosting hizmetleri.</li>
+      </ul>
+      <p>Bu hizmet sağlayıcıların kendi gizlilik politikaları mevcuttur ve verileriniz bu politikalara tabi olabilir.</p>
 
-      <h2>10. Güvenlik İhlali Bildirimi</h2>
+      <h2>10. Güvenlik Tedbirleri</h2>
+      <p>Verileriniz taşınırken TLS/HTTPS ile korunur. Mümkün olan hallerde veriler en az AES-256 benzeri yöntemlerle şifrelenmiş şekilde saklanır.</p>
+      <p>Şifreler güvenli hash algoritmalarıyla depolanır. Email doğrulama zorunludur. Supabase Row Level Security (RLS) ile veri erişimi kontrol edilir. Personel erişimi rol tabanlı kontrollerle sınırlıdır ve veri işleme faaliyetleri denetlenir.</p>
+
+      <h2>11. Güvenlik İhlali Bildirimi</h2>
       <p>Herhangi bir kişisel veri ihlali tespit edildiğinde uygun yasal süreler (ör. GDPR için 72 saat) içinde yetkili denetleyici otoritelere bildirim yapılır ve etkilenen kullanıcılar bilgilendirilir.</p>
 
-      <h2>11. Kullanıcı Hakları ve Taleplerin İcrası</h2>
+      <h2>12. Kullanıcı Hakları ve Taleplerin İcrası</h2>
       <p>Kullanıcılar aşağıdaki haklara sahiptir: erişim, düzeltme, silme, işlemenin kısıtlanması, taşınabilirlik, itiraz, rızayı geri çekme ve otomatik karar alma/profil oluşturma hakkında bilgi talep etme.</p>
       <p><strong>Talepler nasıl yapılır:</strong> Bu haklarınızı kullanmak için <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a> adresine kimlik doğrulayıcı bilgiler ile yazabilirsiniz. Talepler genellikle başvuru tarihinden itibaren 30 gün içinde değerlendirilir.</p>
 
-      <h2>12. Hesap Silme ve Veri İndirme</h2>
+      <h2>13. Hesap Silme ve Veri İndirme</h2>
       <p><strong>Hesap silme:</strong> Hesabınızı uygulama içi ayarlardan veya <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a> üzerinden talep edebilirsiniz. Silme talebi alındığında verileriniz saklama tablosunda belirtilen süreler içinde silinir.</p>
       <p><strong>Veri indirme:</strong> Kullanıcılar hesap verilerini (profil, paylaşımlar, mesajlar, etkileşimler) makul bir formatta (ör. JSON/ZIP) indirebilir. Veri indirme talepleri <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a> adresine iletilmelidir.</p>
 
-      <h2>13. İletişim ve Talepler</h2>
+      <h2>14. Kredi Sistemi ve Monetizasyon</h2>
+      <p>Uygulama, premium özellikler için kredi sistemi kullanır. Virtual Try-On ve diğer premium AI özellikleri için kredi tüketimi gerekebilir. Kredi satın alma işlemleri ile ilgili finansal veriler işlenmez; tüm ödemeler Apple App Store üzerinden gerçekleşir.</p>
+      <p>Premium üyelik sistemi hazırlanmaktadır ve kullanıcılara ek özellikler sunacaktır.</p>
+
+      <h2>15. İletişim ve Talepler</h2>
       <p>Her türlü gizlilik ile ilgili soru, veri talebi veya sorun için: <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a> adresi üzerinden bizimle irtibata geçebilirsiniz.</p>
 
       <hr>
@@ -155,31 +183,41 @@
 
       <h2>3. What data do we collect?</h2>
       <h3>A. Account Information</h3>
-      <p>Name, email, username, password (passwords are securely hashed).</p>
+      <p>Full name, email, username, password (passwords are securely hashed), gender, date of birth, profile photo, bio, website.</p>
+      <p><strong>Third-Party Login:</strong> Google Sign-In, Apple Sign-In, Facebook Login are available.</p>
       <h3>B. Content Data</h3>
-      <p>Outfit images you upload, captions, tags and location (if you permit).</p>
+      <p>Outfit images you upload (multi-photo support), profile photos, virtual try-on results, post captions, comments, story uploads, tags and location (only for weather via WeatherKit integration, optional).</p>
       <h3>C. Usage & Technical Data</h3>
-      <p>IP address, device information (model, OS), browser info, app version, logs, cookie IDs.</p>
+      <p>IP address, device information (model, OS), device token (for push notifications), app version, logs, crash reports (Firebase Crashlytics), Smartlook analytics, Meta Pixel Events, Google AdMob data.</p>
       <h3>D. Communication Data</h3>
-      <p>Support requests, messages between users, feedback.</p>
-      <h3>E. Analytics & Performance Data</h3>
-      <p>Usage metrics, engagement data, performance measurements.</p>
+      <p>Support requests, private messaging system between users, comments, feedback, user report system data.</p>
+      <h3>E. Social Media Interactions</h3>
+      <p>Follow/follower relationships, likes, comments, reposts, sharing data, user blocking lists, notification preferences.</p>
+      <h3>F. Analytics & Performance Data</h3>
+      <p>Usage metrics, engagement data, performance measurements, Smartlook user behavior analytics, Meta Pixel Events, Google AdMob advertising performance.</p>
 
       <p><em>Note:</em> In some jurisdictions photos may be considered biometric data; by default the App does <strong>not</strong> perform face recognition or biometric profiling. If such processing is introduced, explicit consent will be requested.</p>
 
       <h2>4. Purposes of Processing & Legal Bases</h2>
       <ol>
         <li><strong>Providing the service & account management</strong> (account data, content): Performance of a contract / necessary for service provision.</li>
-        <li><strong>Generating outfit suggestions (AI)</strong> (content, technical data): User's explicit consent and service provision. Uploading images implies consent to receive suggestions.</li>
+        <li><strong>AI features</strong> (content, technical data): Virtual Try-On (using Gemini AI), AI Chat (fashion recommendations), Clothing Analysis, Background Removal service. User's explicit consent and service provision.</li>
         <li><strong>Analytics & service improvement</strong> (usage & analytics): Legitimate interest (improving service quality). Legitimate interest assessment and data minimization are documented.</li>
         <li><strong>Legal obligations</strong> (logs, support records): Compliance with legal requirements.</li>
-        <li><strong>Marketing / Advertising</strong> (with user consent/preferences): Explicit consent or user choices; details about sharing with advertising partners will be provided.</li>
+        <li><strong>Marketing / Advertising</strong> (Google AdMob, Meta Pixel): Explicit consent or user preferences; Google AdMob ads and Meta Pixel Events for advertising performance measurement.</li>
+        <li><strong>Social media sharing</strong>: Content sharing to Instagram, WhatsApp, Snapchat (upon user request).</li>
       </ol>
 
       <h2>5. Artificial Intelligence (AI) & Automated Processing</h2>
-      <p>The App analyses only the outfit images you upload to generate <strong>outfit suggestions</strong>. Suggestions are generated by image-processing and machine learning models.</p>
+      <p>The App provides the following AI features:</p>
+      <ul>
+        <li><strong>Virtual Try-On:</strong> Using Gemini AI to virtually try on outfits shared by others on your own photos.</li>
+        <li><strong>AI Chat:</strong> Artificial intelligence assistant for fashion and style recommendations.</li>
+        <li><strong>Clothing Analysis:</strong> Analysis of uploaded clothing and outfit suggestions.</li>
+        <li><strong>Background Removal:</strong> Service to remove backgrounds from photos.</li>
+      </ul>
       <p>AI-generated suggestions are <strong>recommendations</strong> and do not result in legal or otherwise significant automated decisions about users.</p>
-      <p><strong>Model training:</strong> If your images will be used to train models, this will only occur with a separate explicit opt-in consent. Without consent, your images are used solely to produce suggestions for your account and are not copied for training.</p>
+      <p><strong>Model training:</strong> If your images will be used to train models, this will only occur with a separate explicit opt-in consent. Without consent, your images are processed solely for AI features for your use and are not copied for training.</p>
       <p>You may dispute AI outputs by contacting <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a>; disputes will be reviewed by a human.</p>
 
       <h2>6. Biometric & Sensitive Data</h2>
@@ -213,22 +251,40 @@
         <li><strong>Mobile apps:</strong> App Settings &gt; Privacy / Cookie preferences</li>
       </ul>
 
-      <h2>9. Security Measures</h2>
-      <p>Data in transit is protected by TLS/HTTPS. Data at rest is encrypted where possible (e.g. AES-256).</p>
-      <p>Passwords are stored with secure hashing. Staff access is role-based and monitored. Regular security and penetration tests are performed.</p>
+      <h2>9. Third-Party Service Providers</h2>
+      <p>The App uses the following third-party services:</p>
+      <ul>
+        <li><strong>Supabase:</strong> PostgreSQL database and authentication services, protected with Row Level Security (RLS).</li>
+        <li><strong>Google:</strong> Sign-In service, AdMob advertising, Analytics.</li>
+        <li><strong>Apple:</strong> Sign in with Apple, WeatherKit (weather data).</li>
+        <li><strong>Meta/Facebook:</strong> Facebook Login, Meta Pixel Events.</li>
+        <li><strong>Cloudflare:</strong> Content delivery network (CDN) and security services.</li>
+        <li><strong>Firebase:</strong> Crashlytics crash reporting.</li>
+        <li><strong>Smartlook:</strong> User behavior analytics.</li>
+        <li><strong>Vercel:</strong> Web hosting services.</li>
+      </ul>
+      <p>These service providers have their own privacy policies and your data may be subject to those policies.</p>
 
-      <h2>10. Breach Notification</h2>
+      <h2>10. Security Measures</h2>
+      <p>Data in transit is protected by TLS/HTTPS. Data at rest is encrypted where possible (e.g. AES-256).</p>
+      <p>Passwords are stored with secure hashing. Email verification is mandatory. Data access is controlled through Supabase Row Level Security (RLS). Staff access is role-based and monitored.</p>
+
+      <h2>11. Breach Notification</h2>
       <p>In the event of a personal data breach, relevant supervisory authorities will be notified within applicable timeframes (e.g. 72 hours under GDPR) and affected users will be informed.</p>
 
-      <h2>11. Your Rights & How to Exercise Them</h2>
+      <h2>12. Your Rights & How to Exercise Them</h2>
       <p>You have rights including access, rectification, erasure, restriction, portability, objection, withdraw consent and information about automated decisions/profiling.</p>
       <p><strong>How to file a request:</strong> Send identity-verifying information to <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a>. Requests are typically processed within 30 days.</p>
 
-      <h2>12. Account Deletion & Data Export</h2>
+      <h2>13. Account Deletion & Data Export</h2>
       <p><strong>Account deletion:</strong> Request deletion via in-app settings or <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a>. Data will be deleted according to the retention table.</p>
       <p><strong>Data export:</strong> Users may request their account data (profile, uploads, messages, interactions) in a machine-readable format (e.g. JSON/ZIP).</p>
 
-      <h2>13. Contact & Requests</h2>
+      <h2>14. Credit System & Monetization</h2>
+      <p>The App uses a credit system for premium features. Virtual Try-On and other premium AI features may require credit consumption. Financial data from credit purchases is not processed; all payments are handled through the Apple App Store.</p>
+      <p>A premium membership system is in development and will offer additional features to users.</p>
+
+      <h2>15. Contact & Requests</h2>
       <p>For privacy questions or requests: <a href="mailto:support@outfictcheck.online">support@outfictcheck.online</a>.</p>
 
       <hr>
