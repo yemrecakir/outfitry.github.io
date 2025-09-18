@@ -3,22 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Outfitry — Legal Documents</title>
+  <title>Outfitry — AI Fashion & Style Platform</title>
+  <meta name="description" content="Outfitry - AI-powered fashion platform where you can share outfits, virtually try on clothes, and connect with a global style community. Download now on App Store.">
+  <meta name="keywords" content="fashion, style, outfit, virtual try-on, AI, social, fashion app, style community">
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;color:#222;margin:0;padding:0;background:#f7f7f8}
-    .container{max-width:900px;margin:40px auto;background:#fff;padding:28px;border-radius:8px;box-shadow:0 6px 22px rgba(0,0,0,0.08)}
-    h1,h2,h3{color:#111}
-    h1{font-size:28px;margin-bottom:6px}
-    h2{font-size:20px;margin-top:24px}
-    p,li{font-size:15px}
-    .muted{color:#666;font-size:13px}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;color:#222;margin:0;padding:0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh}
+    .container{max-width:900px;margin:40px auto;background:#fff;padding:32px;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,0.1);position:relative;overflow:hidden}
+    .container::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#667eea,#764ba2,#f093fb,#f5576c);}
+    .hero{text-align:center;margin-bottom:40px;padding:32px 20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;color:#fff;position:relative}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');}
+    .hero-content{position:relative;z-index:1}
+    h1{font-size:36px;margin-bottom:16px;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero h1{color:#fff;background:none;-webkit-text-fill-color:#fff}
+    .hero p{font-size:18px;margin-bottom:24px;opacity:0.95}
+    .app-badge{display:inline-block;margin:8px;transition:transform 0.2s ease}
+    .app-badge:hover{transform:translateY(-2px)}
+    .app-badge img{height:48px;border-radius:8px}
+    h2{font-size:24px;margin-top:32px;margin-bottom:16px;color:#0b76ef}
+    p,li{font-size:16px;margin-bottom:12px}
+    .muted{color:#666;font-size:14px}
     .hidden{display:none}
-    .document-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:30px}
-    .document-card{background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:20px;text-decoration:none;color:inherit;transition:all 0.2s ease}
-    .document-card:hover{background:#e9ecef;border-color:#dee2e6;text-decoration:none}
-    .document-title{font-size:18px;font-weight:600;color:#0b76ef;margin-bottom:8px}
-    .document-description{color:#666;font-size:14px}
-    .footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #e9ecef}
+    .document-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+    .document-card{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);border:2px solid transparent;border-radius:12px;padding:24px;text-decoration:none;color:inherit;transition:all 0.3s ease;position:relative;overflow:hidden}
+    .document-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,#667eea,#764ba2);opacity:0;transition:opacity 0.3s ease}
+    .document-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,0.15);text-decoration:none}
+    .document-card:hover::before{opacity:0.05}
+    .document-card:hover .document-title{color:#667eea}
+    .document-title{font-size:20px;font-weight:600;color:#0b76ef;margin-bottom:12px;position:relative;z-index:1}
+    .document-description{color:#666;font-size:15px;line-height:1.5;position:relative;z-index:1}
+    .stats{display:flex;justify-content:space-around;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);color:#fff;padding:24px;border-radius:12px;margin:32px 0}
+    .stat{text-align:center}
+    .stat-number{font-size:28px;font-weight:bold}
+    .stat-label{font-size:14px;opacity:0.9;margin-top:4px}
+    .footer{text-align:center;margin-top:48px;padding-top:24px;border-top:2px solid #e9ecef}
+    .highlight{background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600}
+    @media (max-width: 768px) {
+      body{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
+      .container{margin:20px;padding:24px;border-radius:12px}
+      .hero{padding:24px 16px}
+      .hero h1{font-size:28px}
+      .document-links{grid-template-columns:1fr;gap:16px}
+      .stats{flex-direction:column;gap:16px;text-align:center}
+    }
   </style>
 </head>
 <body>
@@ -26,12 +52,35 @@
 
     <!-- Turkish content -->
     <div data-lang="tr" class="hidden" lang="tr">
-      <h1>Outfitry — Yasal Belgeler</h1>
-      <p class="muted">Son Güncelleme: 11 Eylül 2025</p>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Outfitry'a Hoş Geldiniz</h1>
+          <p>AI destekli moda ve stil platformu - Kendi tarzını keşfet, kombinlerini paylaş, sanal deneme yap!</p>
+          <div>
+            <a href="#" class="app-badge">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' rx='8' fill='%23000'/%3E%3Ctext x='60' y='25' fill='white' font-family='Arial' font-size='12' text-anchor='middle'%3EApp Store'dan İndir%3C/text%3E%3C/svg%3E" alt="App Store'dan İndir">
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <hr>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Aktif Kullanıcı</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Paylaşılan Kombin</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Destekli Deneyim</div>
+        </div>
+      </div>
 
-      <p>Outfitry uygulaması için gizlilik politikası ve kullanım koşullarına aşağıdaki bağlantılardan ulaşabilirsiniz:</p>
+      <h2>📱 Uygulama Hakkında</h2>
+      <p><span class="highlight">Outfitry</span>, moda severler için tasarlanmış yapay zeka destekli sosyal platform. Günlük kombinlerinizi paylaşın, başkalarının kıyafetlerini sanal olarak deneyin ve kişiselleştirilmiş stil önerileri alın.</p>
 
       <div class="document-links">
         <a href="privacy.html" class="document-card">
@@ -45,8 +94,16 @@
         <a href="terms.html" class="document-card">
           <div class="document-title">📄 Kullanım Koşulları</div>
           <div class="document-description">
-            Uygulamayı kullanırken uymanız gereken kurallar, sorumluluklar ve yasal koşullar. 
+            Uygulamayı kullanırken uymanız gereken kurallar, sorumluluklar ve yasal koşullar.
             Hesap yönetimi ve içerik politikaları.
+          </div>
+        </a>
+
+        <a href="about.html" class="document-card">
+          <div class="document-title">ℹ️ Hakkımızda</div>
+          <div class="document-description">
+            Outfitry uygulaması hakkında detaylı bilgiler. Özelliklerimiz, misyonumuz ve
+            yapay zeka destekli moda deneyimi nasıl sunduğumuz.
           </div>
         </a>
       </div>
@@ -60,12 +117,35 @@
 
     <!-- English content -->
     <div data-lang="en" class="hidden" lang="en">
-      <h1>Outfitry — Legal Documents</h1>
-      <p class="muted">Last Updated: September 11, 2025</p>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Outfitry</h1>
+          <p>AI-powered fashion & style platform - Discover your style, share outfits, try virtually!</p>
+          <div>
+            <a href="#" class="app-badge">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' rx='8' fill='%23000'/%3E%3Ctext x='60' y='25' fill='white' font-family='Arial' font-size='12' text-anchor='middle'%3EDownload on App Store%3C/text%3E%3C/svg%3E" alt="Download on App Store">
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <hr>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Active Users</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Outfits Shared</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Powered Experience</div>
+        </div>
+      </div>
 
-      <p>You can access the privacy policy and terms of service for the Outfitry app through the links below:</p>
+      <h2>📱 About the App</h2>
+      <p><span class="highlight">Outfitry</span> is an AI-powered social platform designed for fashion enthusiasts. Share your daily outfits, virtually try on others' clothes, and get personalized style recommendations.</p>
 
       <div class="document-links">
         <a href="privacy.html" class="document-card">
@@ -79,8 +159,16 @@
         <a href="terms.html" class="document-card">
           <div class="document-title">📄 Terms of Service</div>
           <div class="document-description">
-            Rules, responsibilities and legal conditions you must follow when using the app. 
+            Rules, responsibilities and legal conditions you must follow when using the app.
             Account management and content policies.
+          </div>
+        </a>
+
+        <a href="about.html" class="document-card">
+          <div class="document-title">ℹ️ About Us</div>
+          <div class="document-description">
+            Detailed information about the Outfitry app. Our features, mission and
+            how we provide an AI-powered fashion experience.
           </div>
         </a>
       </div>
